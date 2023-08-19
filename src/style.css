@@ -1,0 +1,10 @@
+.box:hover .boxtext {
+  color: white;
+}
+
+.DownApple:hover .logcolorapple {
+  color: white;
+}
+.DownPlay:hover .logocolorplay {
+  color: #014dfe;
+}
