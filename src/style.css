@@ -1,42 +1,17 @@
-.box:hover .boxtext {
-  color: white;
+* {
+  padding: 0%;
+  margin: 0%;
 }
 
-.DownApple:hover .logcolorapple {
-  color: white;
-}
-.DownPlay:hover .logocolorplay {
-  color: #014dfe;
+.container {
+  display: block;
 }
 
-html {
-  scroll-behavior: smooth;
+.heroheight {
+  height: calc(100vh - 90px);
 }
 
-/* .texture {
-  transform: translateY(-40px);
-  height: 100vh;
-  width: 100%;
-  background-color: transparent;
-  background-image: repeating-linear-gradient(
-    -5deg,
-    white 0,
-    white 20px,
-    transparent 20px,
-    transparent 100px
-  );
+.screenlimit {
+  max-width: 1300px !important;
+  min-width: 400px !important;
 }
-
-.second {
-  transform: rotate(40deg) translate(350px, -300px);
-  width: 60%;
-  height: 100vh;
-  background-image: repeating-linear-gradient(
-    6deg,
-    white 0,
-    white 20px,
-    transparent 20px,
-    transparent 100px
-  );
-  opacity: 0.1;
-} */
