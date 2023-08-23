@@ -15,58 +15,339 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@200&family=Raleway&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="bg-red-600">
+  <body class="bg-white">
     <!-- Navbar Section -->
-    <nav class="h-[90px] bg-blue-600 mx-auto w-full block">
-      <div class="h-full bg-black screenlimit mx-auto"></div>
-    </nav>
+    <div class="container h-[100px] bg-[#014dfe] mx-auto pt-[40px] p-8 w-full block">
+      <div class=" h-full mx-auto flex flex-col items-center justify-center">
+        <nav
+        class="flex flex-row justify-between items-center h-full w-[100%] sm:w-[90%]">
+        <img
+          class="h-[4.5vh] sm:h-[5vh] md:h-[6vh] ml-[15px]"
+          src="../public/ICON__1_-removebg.png"
+          alt="logo"
+        />
+        <ul
+          class="xl:flex flex-row justify-between xl:w-[40%] text-white font-medium hidden"
+        >
+          <li>
+            <a href="#home" class="p-[10px] text-[2.4vh] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline lg:text-[2.2vh]">Home</a>
+          </li>
+          <li>
+            <a href="#features" class="p-[10px] text-[2.4vh] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline lg:text-[2.2vh]">Features</a>
+          </li>
+          <li>
+            <a href="#aboutus"  class="p-[10px] text-[2.4vh] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline lg:text-[2.2vh]">About Us</a>
+          </li>
+          <li>
+            <a href="#download" class="p-[10px] text-[2.4vh] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline lg:text-[2.2vh]">Download</a>
+          </li>
+        </ul>
+        <button
+          class="w-[25vh] h-[8.5vh] text-[#014dfe] text-[3vh] bg-white rounded-full font-medium hover:bg-[#014dfe] hover:text-white hover:border-2 hover:border-white active:translate-y-[5px] ease-in-out duration-300 hidden xl:block"
+        >
+          Try For Free
+        </button>
+         
+        <!-- Mobile version -->
+
+        <div id="MenuIcondiv" class="visible text-white scale-150 sm:scale-200 z-50 translate-x-[-20px] xl:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+      </nav>
+
+              <!-- Mobile Menu -->
+      <div id="MenuList" class="absolute flex flex-col h-[80vh] inset-0 bg-black w-[100%] z-40 hidden">
+        <ul
+        class="flex flex-col justify-around h-[50vh] mt-[10vh] items-center xl:w-[40%] text-white font-medium "
+      >
+        <li>
+          <a href="#home" id="MenuItem" class="p-[10px] text-[2.4vh] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline lg:text-[2.2vh]">Home</a>
+        </li>
+        <li>
+          <a href="#features" id="MenuItem" class="p-[10px] text-[2.4vh] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline lg:text-[2.2vh]">Features</a>
+        </li>
+        <li>
+          <a href="#aboutus" id="MenuItem"  class="p-[10px] text-[2.4vh] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline lg:text-[2.2vh]">About Us</a>
+        </li>
+        <li>
+          <a href="#download" id="MenuItem" class="p-[10px] text-[2.4vh] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline lg:text-[2.2vh]">Download</a>
+        </li>
+      </ul>
+      <button
+        class="w-[25vh] h-[9vh] m-auto text-[#014dfe] text-[3vh] bg-white rounded-full font-medium hover:bg-[#014dfe] hover:text-white hover:border-2 hover:border-white active:translate-y-[5px] ease-in-out duration-300"
+      >
+        Try For Free
+      </button>
+
+      </div>
+    </div>
+
+      <script>
+        const MenuIcondiv = document.querySelector("#MenuIcondiv");
+        const MenuList = document.querySelector("#MenuList");
+        const MenuItem = document.querySelectorAll("#MenuItem");
+        const menuicon = document.querySelector(".fa-solid");
+
+        MenuIcondiv.addEventListener("click",()=>{
+          MenuList.classList.toggle("hidden");
+          menuicon.classList.toggle("fa-xmark");
+        })
+
+        MenuItem.forEach(link => {
+          link.addEventListener("click",()=>{
+            MenuList.classList.toggle("hidden");
+            menuicon.classList.toggle("fa-xmark");
+          })
+        }
+        )
+      </script>
+      </div>
+    
     <!-- End Navbar Section -->
 
     <!-- Hero Section -->
     <section
-      class="container heroheight screenlimit mx-auto bg-black mb-[50px]"
+      class="container mx-auto bg-[#014dfe] pt-[50px] lg:pt-[100px] px-4 py-5 translate-y-[-1px] relative"
     >
-      <div class="h-full bg-white screenlimit mx-auto"></div>
+      <div
+        class="bg-[#014dfe] w-[90%] mx-auto flex flex-col lg:flex-row py-2 pb-[3rem]"
+      >
+        <!-- Hero TOP/LEFT inner div -->
+        <div
+          class="font-['Raleway'] text-[2.2rem] max-w-[490px] min-[540px]:max-w-full min-[540px]:text-[3rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[3.5rem] xl:text-[4.5rem] 2xl:text-[5.5rem] lg:w-8/12 text-white lg:tracking-wider 2xl:leading-[15vh] xl:leading-[14vh] lg:leading-[12vh]"
+        >
+          Get the best <br />
+          <b>experience</b> when sending messages.
+        </div>
+        <!-- Hero Right/Bottom inner div -->
+        <div class="lg:w-4/12 flex flex-col">
+          <p
+            class="2xl:w-[90%] xl:w-[100%] xl:text-[1.1rem] lg:mt-[30px] text-left ml-auto text-[1.2rem] py-5 text-[#cacaca]"
+          >
+            Platform used to send messages with a myriad of features. by
+            prioritizing the user experience
+          </p>
+          <div class="w-[100%] flex flex-col m-auto items-center xl:items-end">
+            <button
+              class="DownApple text-[#014dfe] bg-white xl:h-[9vh] h-[7vh] w-[24vh] lg:w-[26vh] md:w-[36vh] rounded-full mt-[2vh] text-[2vh] font-medium hover:bg-[#014dfe] hover:text-white hover:border-2 hover:border-white active:translate-y-[5px] ease-in-out duration-300"
+            >
+              <i
+                class="logcolorapple fa-brands fa-apple text-[2.5vh] text-[#014dfe]"
+              >
+              </i>
+              Download Now
+            </button>
+            <button
+              class="DownPlay text-white bg-[#014dfe] xl:h-[9vh] h-[7vh] w-[24vh] lg:w-[26vh] md:w-[36vh] rounded-full border-2 border-white mt-[2vh] md:mt-[3vh] text-[2vh] font-medium hover:bg-white hover:text-[#014dfe] active:translate-y-[5px] ease-in-out duration-300"
+            >
+              <i
+                class="logocolorplay fa-brands fa-google-play text-[2vh] text-white scale-85"
+              ></i>
+              Download Now
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- End Hero Section -->
 
     <!-- Hero Image Customers Section-->
-    <section class="container screenlimit h-[100vh] mx-auto bg-black mb-[50px]">
-      <div class="h-full bg-pink-600 screenlimit mx-auto"></div>
+    <section
+      class="container mx-auto bg-yellow-600 mb-[30px] relative translate-y-[23px]"
+    >
+      <div
+        class="bg-[#014dfe] mx-auto py-4 h-[60%] w-[100%] absolute top-[-25px] left-0 z-[1]"
+      ></div>
+      <div
+        class="bg-black mx-auto py-4 h-[8%] w-full absolute z-[1] top-[46%] left-0"
+      ></div>
+      <div
+        class="bg-white mx-auto h-[60%] w-[101%] translate-x-[-2px] absolute z-[1] top-[54%]"
+      ></div>
+      <img
+        class="z-[2] relative w-[90%] m-auto drop-shadow-lg"
+        src="../public/HERO-IMAGE-removebg.png"
+        alt="Hero Image"
+      />
+      <img
+        class="z-[2] relative w-[90%] m-auto mt-[10px]"
+        src="../public/customers.png"
+        alt="Customers"
+      />
     </section>
     <!-- End Hero Image Customers Section-->
 
     <!-- Features Section -->
-    <section class="container screenlimit h-[100vh] mx-auto bg-black mb-[50px]">
-      <div class="h-full bg-purple-600 screenlimit mx-auto"></div>
+    <section class="container mx-auto mb-[50px] mt-[30px] py-[2vh] z-[3] relative">
+      <div class="bg-transparent mx-auto">
+        <div
+          class="flex flex-col items-center w-[90%] m-auto  mb-[8vh]"
+        >
+          <h4
+            class="text-[#014dfe] px-[4vh] my-[4vh] text-[3vh] h-full rounded-full bg-[#eff1f5] font-medium"
+          >
+            Featured
+          </h4>
+
+          <h3 class="text-[5vh] 2xl:text-[7vh] xl:text-[6vh] text-center">
+            Reasons why you should choose a <b class="text-[#014dfe]">Chatbox.</b>
+          </h3>
+          <p class="text-[#cacaca] lg:text-[3vh] sm:text-[2.5vh] text-[2vh] mt-[2vh] text-center mb-[30px]">
+            Chatbot has several features that make the reason <br/> why you choose chatbox</p> 
+          </p>
+
+          <div class="flex flex-col lg:flex-row w-[100%] mt-[60px] items-center justify-around lg:justify-between gap-[20px]">
+            <div class="box flex flex-col items-center w-[80%] lg:w-[60vh] lg:h-[44vh] h-[35vh] bg-[#eff1f5] hover:bg-[#014dfe] rounded-[60px] lg:rounded-[30px] justify-around p-[30px] pointer ease-in-out duration-300">
+              <i class="fa-solid fa-face-smile text-[5vh] lg:p-[20px] p-[15px] bg-white rounded-full" style="color: #014dfe"></i>
+              <h2 class="boxtext text-black font-medium lg:text-[4.2vh] sm:text-[3.5vh] text-[3vh]">Easy to use</h2>
+              <p class="text-[#cacaca] text-[2.5vh] text-center">Easy to use for anyone.</p>
+              <p class="text-[#cacaca] text-[2.5vh] text-center">and simple</p>
+            </div>
+            <div class="box flex flex-col items-center w-[80%] lg:w-[60vh] lg:h-[44vh] h-[35vh]  bg-[#eff1f5] hover:bg-[#014dfe] rounded-[60px] lg:rounded-[30px] justify-around p-[30px] pointer ease-in-out duration-300">
+              <i class="fa-solid fa-clock text-[5vh] lg:p-[20px] p-[15px] bg-white rounded-full" style="color: #014dfe"></i>
+              <h2 class="boxtext text-black font-medium lg:text-[4.2vh] sm:text-[3.5vh] text-[3vh]">Real Time</h2>
+              <p class="text-[#cacaca] text-[2.5vh] text-center">Connect with customers</p>
+              <p class="text-[#cacaca] text-[2.5vh] text-center">in real time.</p>
+            </div>
+            <div class="box flex flex-col items-center w-[80%] lg:w-[60vh] lg:h-[44vh] h-[35vh]  bg-[#eff1f5] hover:bg-[#014dfe]  rounded-[60px] lg:rounded-[30px] justify-around p-[30px] pointer ease-in-out duration-300">
+              <i class="fa-solid fa-lock text-[5vh] lg:p-[20px] p-[15px] bg-white rounded-full" style="color: #014dfe"></i>
+              <h2 class="boxtext text-black font-medium lg:text-[4.2vh] sm:text-[3.5vh] text-[3vh]">Safety & Private</h2>
+              <p class="text-[#cacaca] text-[2.5vh] text-center">Enjoy your comfort and safety</p>
+              <p class="text-[#cacaca] text-[2.5vh] text-center">when Communicate.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- End Features Section -->
 
     <!-- Discription One Section -->
-    <section class="container screenlimit h-[100vh] mx-auto bg-black mb-[50px]">
-      <div class="h-full bg-yellow-600 screenlimit mx-auto"></div>
+    <section class="container mx-auto bg-black mb-[50px]">
+      <div class="bg-white  mx-auto">
+        <div class="flex lg:flex-row flex-col w-full mx-auto" id="aboutus">
+          <div class="lg:w-[50%] w-[80%] flex flex-col justify-around lg:items-start lg:mt-[4vh] lg:ml-[10vh] pl-[20px]">
+            <h3 class="2xl:text-[7.5vh] xl:text-[6.2vh] lg:text-[5vh] md:text-[6vh] md:my-[30px] md:text-[5vh] sm:text-[4vh] text-[3.2vh]">Communicate more efficiently by using <b class="text-[#014dfe]">Chatbox</b></h3>
+            <p class="text-[#cacaca] lg:text-[2.5vh] 2xl:text-[3vh] xl:text-[2.6vh] sm:text-[2.5vh] text-[2vh] text my-[30px] lg:w-[90%] lg:leading-[5.5vh]">Send messages easily using only mobile or destop applications. and with a myriad of features that can <br/> make your aexperience different from other applications.</p>
+            <div class="flex flex-row lg:justify-start justify-around w-full md:mb-[10vh]">
+                <div class="flex flex-col items-start lg:mr-[10vh] mr-[2vh]">
+                  <h1 class="font-medium lg:text-[6vh] text-[4vh]">1M+</h1>
+                  <p class="text-[#cacaca] text-[2.5vh]">Users</p>
+                </div>
+                <div class="flex flex-col items-start lg:mr-[10vh] mr-[2vh]">
+                  <h1 class="font-medium lg:text-[6vh] text-[4vh]">2M+</h1>
+                  <p class="text-[#cacaca] text-[2.5vh]">Downloads</p>
+                </div>
+                <div class="flex flex-col items-start lg:mr-[10vh] mr-[2vh]">
+                  <h1 class="font-medium lg:text-[6vh] text-[4vh]">2+</h1>
+                  <p class="text-[#cacaca] text-[2.5vh]"">Years</p>
+                </div>
+            </div>
+         </div>
+          <div class="lg:w-[50%] w-[100%] overflow-hidden mt-[50px] md:mt-0">
+            <div class="bg-[#eff1f5] rounded-l-[40px] w-full overflow-hidden z-0 translate-x-[16vh] lg:translate-x-[2vh]">
+              <img class="2xl:h-[105vh] xl:h-[95vh] lg:h-[90vh] md:h-[70vh] h-[50vh]  translate-y-[4vh] lg:translate-x-[5vh] translate-x-[5vh]  object-cover object-left-top z-[2]" src="../public/HERO-IMAGE-removebg.png" alt="stats" />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- End Discription One Section -->
 
     <!-- Discription Two Section -->
-    <section class="container screenlimit h-[100vh] mx-auto bg-black mb-[50px]">
-      <div class="h-full bg-green-600 screenlimit mx-auto"></div>
+    <section class="container mx-auto bg-black mb-[50px]">
+      <div class="bg-white mx-auto">
+        <div class="flex lg:flex-row flex-col-reverse">
+          <div class="lg:w-[50%] w-[100%] overflow-hidden">
+            <div class="bg-[#eff1f5] rounded-r-[40px] w-full overflow-hidden z-0 translate-x-[-15vh] lg:translate-x-[-2vh]">
+              <img class="2xl:h-[105vh] xl:h-[90vh] lg:h-[80vh]  md:h-[70vh] h-[50vh] translate-y-[4vh] translate-x-[-5vh] object-cover object-right-top z-[2]" src="../public/HERO-IMAGE-removebg.png" alt="stats" />
+            </div>
+          </div>
+          <div class="lg:w-[50%] w-[80%] flex flex-col justify-around lg:items-start items-center mt-[10px] p-[20px]">
+                <h3 class="2xl:text-[7.5vh] xl:text-[6.2vh] lg:text-[5vh] md:text-[6vh] md:my-[30px] md:text-[5vh] sm:text-[4vh] text-[3.2vh]">Send messages in <b class="text-[#014dfe]">Real Time</b>, without any delay between us</h3>
+                <p class="text-[#cacaca] lg:text-[2.5vh] 2xl:text-[3vh] xl:text-[2.6vh] sm:text-[2.5vh] text-[2vh] text my-[30px] lg:w-[90%] lg:leading-[5.5vh]">Send messages easily and also without any delay between us make the convenience of sending messages better and more fun</p>
+                <button class="text-[2.5vh] px-[5px] md:text-[3vh] py-[15px] lg:px-[20px] bg-[#014dfe] w-[27vh] rounded-full text-white lg:mb-[60px] mb-[20px] hover:bg-white hover:border-2 hover:border-[#014dfe] hover:text-[#014dfe] active:translate-y-[5px] ease-in-out duration-300">Learn More</button>
+         </div>
+        </div>  
+      </div>
     </section>
     <!-- End Discription Two Section -->
 
     <!-- Download Section -->
-    <section class="container screenlimit h-[100vh] mx-auto bg-black mb-[50px]">
-      <div class="h-full bg-cyan-600 screenlimit mx-auto"></div>
+    <section class="container mx-auto bg-black relative">
+      <div class="bg-cyan-600 mx-auto">
+          <div class="bg-[#014dfe] w-[100%] h-[50%] relative z-0">
+            <img class=" w-[90%] z-[1] mx-auto translate-y-[10%] h-[180px] min-[500px]:h-[220px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px] object-cover object-top"  src="../public/HERO-IMAGE-removebg.png" alt="stats" />
+          </div>
+      </div>
     </section>
     <!-- End Download Section -->
 
     <!-- Footer Section -->
-    <section class="container screenlimit h-[100vh] mx-auto bg-black">
-      <div class="h-full bg-orange-600 screenlimit mx-auto"></div>
+    <section class="container mx-auto bg-black relative z-2">
+      <div class="bg-orange-600 mx-auto">
+        <div class="bg-black h-[40vh] w-full" id="download">
+          <div class="flex flex-col xl:flex-row lg:h-[30vh] w-[93%] m-auto p-[5vh] justify-between lg:mb-[7vh] mb-[3vh]">
+            <h1 class="text-white 2xl:text-[10vh] text-center lg:text-left w-[100%]  lg:text-[8vh] text-[4vh] xl:w-[50%] xl:tracking-widest ">Want to stay Connected?</h1>
+            <div class="flex flex-row  lg:w-[50%] xl:w-[40%] w-full mt-[2vh] lg:h-[30vh] items-center justify-around">
+                 
+                  <button
+                    class="text-white bg-[#014dfe] xl:h-[8vh] lg:w-[32vh] xl:text-[2.2vh] h-[5vh] w-[18vh] text-[1.5vh] rounded-full  mr-[10px] hover:bg-black hover:border-2 hover:border-white active:translate-y-[5px] ease-in-out duration-300"
+                  >
+                  <i class="fa-brands fa-apple scale-110" style="color: white"> </i>
+                   
+                    Download Now
+                  </button>
+                  <button
+                  class="text-white bg-black xl:h-[8vh] xl:text-[2.3vh] lg:w-[32vh] xl:text-[2.2vh] h-[5vh] w-[18vh] text-[1.5vh] rounded-full border-2 border-white hover:bg-[#014dfe] hover:border-transparent active:translate-y-[5px] ease-in-out duration-300"
+                >
+                <i class="fa-brands fa-google-play" style="color: white"></i>
+                  Download Now
+                </button>
+            </div>
+            
+          </div>
+          <hr class="text-grey border-1 w-[88%] m-auto opacity-0.5 bg-black h-[1vh]"/>
+          <div class="w-full bg-black lg:h-[50vh] h-[60vh]">
+            <div class="w-[90%] m-auto text-white flex lg:flex-row flex-col h-full lg:pt-[8vh] pb-[5vh] text-[#cacaca] justify-around align-center">
+              <div class="flex flex-col lg:justify-between lg:w-[50%] w-[100%] justify-around items-center lg:items-start gap-[20px]">
+                <img
+                   class="h-[5vh] w-[21vh]"
+                   src="../public/ICON__1_-removebg.png"
+                   alt="logo"
+                />
+                <p class="text-[2.5vh] text-[#cacaca]">Platform used to send messages <br/> with a myriad of features. by <br/> prioritizing the user experience</p>
+                <h3  class="text-[2.7vh] text-[#cacaca]">mail@chatbox.com</h3>
+              </div>
+              <div class="lg:w-[47%] w-[100%] flex flex-row lg:justify-between justify-around h-[20vh] lg:h-full">
+                <ul class="flex flex-col justify-between">
+                  <li><a href="" class="lg:text-[2.8vh] text-[2.3vh] text-white pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">Home</a></li>
+                  <li><a href="" class="lg:text-[2.2vh] text-[#cacaca] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">About Us</a></li>
+                  <li><a href="" class="lg:text-[2.2vh] text-[#cacaca] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">Download</a></li>
+                  <li><a href="" class="lg:text-[2.2vh] text-[#cacaca] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">Community</a></li>
+                </ul>
+                <ul class="flex flex-col justify-between h-[70%]">
+                  <li><a href="" class="lg:text-[2.8vh] text-[2.3vh] text-white pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">Features</a></li>
+                  <li><a href="" class="lg:text-[2.2vh] text-[#cacaca] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">Get Started</a></li>
+                  <li><a href="" class="lg:text-[2.2vh] text-[#cacaca] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">Privacy Policy</a></li>
+                </ul>
+                <ul class="flex flex-col justify-between h-[70%]">
+                  <li><a href="" class="lg:text-[2.8vh] text-[2.3vh] text-white pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">Social Media</a></li>
+                  <li><a href="" class="lg:text-[2.2vh] text-[#cacaca] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">Instagram</a></li>
+                  <li><a href="" class="lg:text-[2.2vh] text-[#cacaca] pointer ease-in-out duration-300 hover:underline-offset-1 hover:underline">Linkedin</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <p class="bg-black text-white text-center text-[#cacaca] text-[2.5vh] p-[4vh]">All right reserved by Chatbox</p>
+        </div>   
+      </div>
+
+      </div>
     </section>
     <!-- End Footer Section -->
   </body>

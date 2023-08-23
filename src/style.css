@@ -1,17 +1,16 @@
 * {
   padding: 0%;
   margin: 0%;
+  box-sizing: border-box;
 }
 
 .container {
-  display: block;
+  min-width: 410px;
 }
 
-.heroheight {
-  height: calc(100vh - 90px);
+.DownApple:hover .logcolorapple {
+  color: white;
 }
-
-.screenlimit {
-  max-width: 1300px !important;
-  min-width: 400px !important;
+.DownPlay:hover .logocolorplay {
+  color: #014dfe;
 }
